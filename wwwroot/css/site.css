@@ -32,3 +32,45 @@ body {
 a:hover{
     color:maroon;
 }
+
+.landing-page {
+    padding: 100px 20px;
+    background-color: darkolivegreen;
+    color: white;
+    min-height: 80vh;
+}
+
+    .landing-page h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .landing-page p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    .landing-page .btn {
+        font-size: 1.2em;
+        padding: 10px 30px;
+    }
+
+
+.privacy-page {
+    background-color: #f8f9fa;
+    color: #333;
+    border-radius: 8px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+    .privacy-page h2 {
+        margin-bottom: 20px;
+    }
+
+    .privacy-page p {
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
