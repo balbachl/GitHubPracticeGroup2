@@ -1,17 +1,14 @@
 ﻿@page
 @model GitHubPractice.Pages.Memberships.IndexModel
-
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
-
+<h1 style="color: #2c3e50; font-weight: bold;">Index</h1>
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" style="color: #3498db; font-weight: bold;">Create New</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table" style="background-color: #f8f9fa;">
+    <thead style="background-color: #34495e; color: white;">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Membership[0].Name)
@@ -26,23 +23,24 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Membership) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.JoinDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsActive)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Membership)
+        {
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="font-weight: bold;">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td style="font-weight: bold;">
+                    @Html.DisplayFor(modelItem => item.JoinDate)
+                </td>
+                <td style="font-weight: bold;">
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id" style="color: #27ae60; font-weight: bold">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id" style="color: #3498db; font-weight: bold">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id" style="color: #e74c3c; font-weight: bold">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
