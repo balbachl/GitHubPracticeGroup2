@@ -5,12 +5,54 @@
     ViewData["Title"] = "Edit";
 }
 
+<style>
+    body {
+        background-color: darkgrey; 
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    form {
+        display: inline-block;
+        background-color: darkslateblue;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    h1, h4 {
+        color: white;
+    }
+
+    .form-control {
+        margin-bottom: 15px;
+        width: 250px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        background-color: darkblue;
+        color: white;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: lightblue;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        color: white;
+        font-weight: bold;
+    }
+</style>
+
 <h1>Edit</h1>
 
 <h4>Membership</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div>
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Membership.Id" />
@@ -37,7 +79,6 @@
             </div>
         </form>
     </div>
-</div>
 
 <div>
     <a asp-page="./Index">Back to List</a>
