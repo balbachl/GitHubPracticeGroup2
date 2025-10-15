@@ -4,13 +4,44 @@
         @{
         ViewData["Title"] = "Create";
         }
-        
-        <h1>Create</h1>
+
+<style>
+    body {
+        background-color: darkslategrey;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    form {
+        display: inline-block; 
+        background-color: darkgray; 
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .form-control {
+        margin-bottom: 15px;
+        width: 250px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        color: white;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        color: black;
+    }
+</style>
+
+    <h1>Create Membership</h1>
         
     <h4>Membership</h4>
     <hr />
-    <div class="row">
-    <div class="col-md-4">
+    <div>
     <form method="post">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -33,7 +64,6 @@
             </div>
         </form>
     </div>
-</div>
 
 <div>
     <a asp-page="Index">Back to List</a>
