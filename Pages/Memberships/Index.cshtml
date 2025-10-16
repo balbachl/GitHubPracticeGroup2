@@ -19,6 +19,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Membership[0].IsActive)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Membership[0].Email)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -34,6 +37,9 @@
                 </td>
                 <td style="font-weight: bold;">
                     @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td style="font-weight: bold;">
+                    @Html.DisplayFor(modelItem => item.Email)
                 </td>
                 <td>
                     <a asp-page="./Edit" asp-route-id="@item.Id" style="color: #27ae60; font-weight: bold">Edit</a> |
