@@ -4,6 +4,7 @@ using GitHubPractice.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GitHubPractice.Migrations
 {
     [DbContext(typeof(MembershipContext))]
-    partial class MembershipContextModelSnapshot : ModelSnapshot
+    [Migration("20251016204106_AddEmailtoEditPage")]
+    partial class AddEmailtoEditPage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
