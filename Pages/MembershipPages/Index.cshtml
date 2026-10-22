@@ -1,5 +1,5 @@
-﻿@page
-@model GitHubPractice.Pages.Memberships.IndexModel
+@page
+@model GitHubPractice.Pages.MembershipPages.IndexModel
 
 @{
     ViewData["Title"] = "Index";
@@ -20,6 +20,9 @@
                 @Html.DisplayNameFor(model => model.Membership[0].JoinDate)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Membership[0].DateOfBirth)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Membership[0].IsActive)
             </th>
             <th></th>
@@ -29,13 +32,16 @@
 @foreach (var item in Model.Membership) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(model => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.JoinDate)
+                @Html.DisplayFor(model => item.JoinDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IsActive)
+                @Html.DisplayFor(model => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.IsActive)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
