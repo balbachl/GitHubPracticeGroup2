@@ -1,11 +1,11 @@
-﻿@page
-@model GitHubPractice.Pages.Memberships.EditModel
+@page
+@model GitHubPractice.Pages.MembershipPages.CreateModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Create";
 }
 
-<h1>Edit</h1>
+<h1>Create</h1>
 
 <h4>Membership</h4>
 <hr />
@@ -13,27 +13,28 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Membership.Id" />
             <div class="form-group">
-                
                 <label asp-for="Membership.Name" class="control-label"></label>
                 <input asp-for="Membership.Name" class="form-control" />
                 <span asp-validation-for="Membership.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                
                 <label asp-for="Membership.JoinDate" class="control-label"></label>
                 <input asp-for="Membership.JoinDate" class="form-control" />
                 <span asp-validation-for="Membership.JoinDate" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Membership.IsActive" /> @Html.DisplayNameFor(model => model.Membership.IsActive)
-                </label>
+            <div class="form-group">
+                <label asp-for="Membership.DateOfBirth" class="control-label"></label>
+                <input asp-for="Membership.DateOfBirth" class="form-control" />
+                <span asp-validation-for="Membership.DateOfBirth" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <label asp-for="Membership.IsActive" class="control-label"></label>
+                <input asp-for="Membership.IsActive" class="form-check-input" />
+                <span asp-validation-for="Membership.IsActive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
