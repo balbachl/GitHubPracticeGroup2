@@ -1,8 +1,66 @@
 ﻿@page
 @model PrivacyModel
+
 @{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="container mt-5">
+
+    <!-- Privacy Header -->
+    <div class="bg-dark text-white p-4 rounded text-center">
+
+        <h1>Privacy Policy</h1>
+
+        <p class="lead">
+            Your privacy is important to us.
+        </p>
+
+    </div>
+
+    <!-- Privacy Information -->
+    <div class="card shadow mt-4 p-4">
+
+        <h3 class="text-primary">
+            Information We Collect
+        </h3>
+
+        <p>
+            Our membership application stores information
+            entered into membership records.
+        </p>
+
+        <hr />
+
+        <h3 class="text-primary">
+            How Information Is Used
+        </h3>
+
+        <p>
+            Membership information is used to demonstrate
+            how records can be managed in a web application.
+        </p>
+
+        <hr />
+
+        <h3 class="text-primary">
+            Data Security
+        </h3>
+
+        <p>
+            Access to membership information should be
+            managed carefully to protect personal data.
+        </p>
+
+    </div>
+
+    <!-- Return Home Button -->
+    <div class="text-center mt-4">
+
+        <a asp-page="/Index" class="btn btn-primary">
+            Return to Home
+        </a>
+
+    </div>
+
+</div>
