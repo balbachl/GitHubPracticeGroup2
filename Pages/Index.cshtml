@@ -1,10 +1,67 @@
 ﻿@page
 @model IndexModel
+
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+
+    <!-- Welcome Section -->
+    <div class="text-center p-5 bg-primary text-white rounded shadow">
+
+        <h1 class="display-4 fw-bold">
+            Welcome to Our Membership Website!
+        </h1>
+
+        <p class="lead">
+            Manage your memberships quickly and easily.
+        </p>
+
+        <a asp-page="/Memberships/Index"
+           class="btn btn-light btn-lg mt-3">
+            View Memberships
+        </a>
+
+    </div>
+
+    <!-- Information Cards -->
+    <div class="row mt-5">
+
+        <div class="col-md-6 mb-4">
+            <div class="card shadow h-100">
+                <div class="card-body p-4">
+
+                    <h3 class="text-primary">
+                        Membership Management
+                    </h3>
+
+                    <p>
+                        View, create, edit, and manage
+                        membership information.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card shadow h-100">
+                <div class="card-body p-4">
+
+                    <h3 class="text-primary">
+                        Easy to Use
+                    </h3>
+
+                    <p>
+                        Our application provides a simple
+                        way to organize membership records.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </div>
