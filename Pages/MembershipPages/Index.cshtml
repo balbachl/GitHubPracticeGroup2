@@ -1,54 +1,46 @@
 @page
 @model GitHubPractice.Pages.MembershipPages.IndexModel
 
+
 @{
     ViewData["Title"] = "Index";
 }
+<div class="row mt-5">
 
-<h1>Index</h1>
+    <div class="col-md-6 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-body p-4">
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Membership[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Membership[0].JoinDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Membership[0].DateOfBirth)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Membership[0].IsActive)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+                <h3 class="text-black">
+                    Memberships
+                </h3>
+                <p>
+                    <a asp-page="Create" class="btn btn-primary btn-lg mt-3">Add New Membership</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex flex-wrap gap-3 text-center p-5 bg-primary text-black rounded-4 shadow-lg justify-content-start">
 @foreach (var item in Model.Membership) {
-        <tr>
-            <td>
-                @Html.DisplayFor(model => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.JoinDate)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.DateOfBirth)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.IsActive)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+        <div class="d-flex flex-lg-column p-3 bg-light rounded-4">
+            <p>
+                Name: @Html.DisplayFor(model => item.Name)
+            </p>
+            <p>
+                Join Date: @Html.DisplayFor(model => item.JoinDate)
+            </p>
+            <p>
+                Date of Birth: @Html.DisplayFor(model => item.DateOfBirth)
+            </p>
+            <p>
+                Active User: @Html.DisplayFor(model => item.IsActive)
+            </p>
+            <p>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> 
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> 
                 <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+            </p>
+        </div>
+    }
+</div>

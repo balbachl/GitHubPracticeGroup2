@@ -4,40 +4,53 @@
 @{
     ViewData["Title"] = "Details";
 }
+<div class="col mt-5">
 
-<h1>Details</h1>
+    <div class="col-md-6 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-body p-4">
 
-<div>
-    <h4>Membership</h4>
+                <h3 class="text-black">
+                    Details
+                </h3>
+                <p>
+                    <h4>Membership</h4>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex p-5 bg-primary text-black rounded-4 shadow-lg col-6">
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
+        <div class="d-flex flex-lg-column p-3 bg-light rounded-4 ">
+        <p class="col-sm-2 fw-bold">
             @Html.DisplayNameFor(model => model.Membership.Name)
-        </dt>
-        <dd class = "col-sm-10">
+        </p>
+        <p class = "col-sm-10">
             @Html.DisplayFor(model => model.Membership.Name)
-        </dd>
-        <dt class = "col-sm-2">
+        </p>
+        <p class="col-sm-2 fw-bold">
             @Html.DisplayNameFor(model => model.Membership.JoinDate)
-        </dt>
-        <dd class = "col-sm-10">
+        </p>
+        <p class = "col-sm-10">
             @Html.DisplayFor(model => model.Membership.JoinDate)
-        </dd>
-        <dt class = "col-sm-2">
+        </p>
+        <p class="col-sm-2 fw-bold">
             @Html.DisplayNameFor(model => model.Membership.DateOfBirth)
-        </dt>
-        <dd class = "col-sm-10">
+        </p>
+        <p class = "col-sm-10">
             @Html.DisplayFor(model => model.Membership.DateOfBirth)
-        </dd>
-        <dt class = "col-sm-2">
+        </p>
+        <p class="col-sm-2 fw-bold">
             @Html.DisplayNameFor(model => model.Membership.IsActive)
-        </dt>
-        <dd class = "col-sm-10">
+        </p>
+        <p class = "col-sm-10">
             @Html.DisplayFor(model => model.Membership.IsActive)
-        </dd>
-    </dl>
+        </p>
+            <div>
+                <a asp-page="./Edit" asp-route-id="@Model.Membership.Id">Edit</a> |
+                <a asp-page="./Index">Back to List</a>
+            </div>
+    </div>
 </div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Membership.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
-</div>
+
